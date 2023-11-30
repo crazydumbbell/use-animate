@@ -1,20 +1,10 @@
-import { useAnimate } from "../hooks";
+import ImageComp from "./ImageComp.jsx";
 
-const B = ({}) => {
-  const { detectedRef, isObserve } = useAnimate();
-
+const B = () => {
   return (
-    <div
-      ref={detectedRef}
-      className="bg-blue-100 min-h-screen flex flex-col justify-center items-center"
-    >
-      <img
-        className={`w-96 h-96 ${
-          isObserve && "animate__animated animate__rubberBand animate__infinite"
-        } `}
-        src="./img/frog.webp"
-        alt="owl"
-      />
+    <div className="bg-blue-100 min-h-screen flex flex-col justify-center items-center gap-20">
+      <ImageComp animateName="animate__bounce" image="frog.webp" alt="frog" />
+      <ImageComp animateName="animate__bounce" image="frog.webp" alt="frog" />
     </div>
   );
 };
